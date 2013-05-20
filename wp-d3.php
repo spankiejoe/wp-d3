@@ -55,9 +55,9 @@ function print_source ($attr, $content) {
 	extract(shortcode_atts(array(
 	      'canvas' => 'canvas'), $attr));
 	$chart = $canvas;
-	echo '<div class="' . $chart . '">';
-	echo '<script type="text/javascript">';
-	echo $content . '</script>' . '</div>';
+	return '<div class="' . $chart . '">' .
+	       '<script type="text/javascript">' .
+	       $content . '</script>' . '</div>';
 }
 
 add_action('init', 'wordpressd3_init');
